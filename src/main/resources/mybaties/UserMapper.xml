@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.sinocall.footBallAI.dao.UserMapper">
+<mapper namespace="com.reke.learn.bootExamples.dao.UserMapper">
     <resultMap id="BaseResultMap" type="com.sinocall.footBallAI.bean.User">
         <id column="id" property="id"/>
         <result column="name" property="name"/>
