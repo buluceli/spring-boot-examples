@@ -18,7 +18,7 @@ import java.util.TreeMap;
 @RestController
 public class ShareController {
 
-	@RequestMapping("weixinShareConfig")
+	@RequestMapping("/weixinShareConfig")
 
 	public Map<String,String> weixinShareConfig(String currentUrl) {
 		String nonce_str = Sha1Util.getNonceStr();

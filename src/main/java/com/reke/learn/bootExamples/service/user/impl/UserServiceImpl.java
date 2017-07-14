@@ -17,7 +17,10 @@ import org.springframework.transaction.annotation.Transactional;
 public class UserServiceImpl extends BaseServiceImpl<User, Long> implements UserService {
 
 	@Autowired
-	private UserMapper userMapper;
+	public void setBaseMapper(UserMapper userMapper) {
+		super.setBaseMapper(userMapper);
+	}
+
 
 
 
