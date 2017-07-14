@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.reke.learn.bootExamples.dao.UserMapper">
-    <resultMap id="BaseResultMap" type="com.sinocall.footBallAI.bean.User">
+    <resultMap id="BaseResultMap" type="com.reke.learn.bootExamples.bean.User">
         <id column="id" property="id"/>
         <result column="name" property="name"/>
         <result column="password" property="password"/>
@@ -65,9 +65,9 @@
     </select>
     <delete id="deleteByPrimaryKey"
             parameterType="java.lang.Long">delete from user where id = #{id,jdbcType=BIGINT}</delete>
-    <insert id="insert" parameterType="com.sinocall.footBallAI.bean.User" useGeneratedKeys="true"
+    <insert id="insert" parameterType="com.reke.learn.bootExamples.bean.User" useGeneratedKeys="true"
             keyProperty="id">insert into user (id, name, password, nick_name, gender, mobile, mobile_area, email, logo, address, regist_ip, last_ip, login_count, sign, remain, exchange_num, bingo_num, reg_type, type, status, reg_time, last_login_time, charge_num, last_charge_time, point, current_month_point, last_month_point, level, charge_total_money, buy_total_coin, take_part_num, buy_num, has_pay_pass, create_num, did, idfa_imei, mac, net, os, osv, ver, r, brand, channel_id, umeng_token, jpush_token, getui_token, notice_switch, id_card, total_commission, total_reward, per_buy_coin, show_reward_cartoon, share_user_id, share_num)values (#{id}, #{name}, #{password}, #{nickName}, #{gender}, #{mobile}, #{mobileArea}, #{email}, #{logo}, #{address}, #{registIp}, #{lastIp}, #{loginCount}, #{sign}, #{remain}, #{exchangeNum}, #{bingoNum}, #{regType}, #{type}, #{status}, #{regTime}, #{lastLoginTime}, #{chargeNum}, #{lastChargeTime}, #{point}, #{currentMonthPoint}, #{lastMonthPoint}, #{level}, #{chargeTotalMoney}, #{buyTotalCoin}, #{takePartNum}, #{buyNum}, #{hasPayPass}, #{createNum}, #{did}, #{idfaImei}, #{mac}, #{net}, #{os}, #{osv}, #{ver}, #{r}, #{brand}, #{channelId}, #{umengToken}, #{jpushToken}, #{getuiToken}, #{noticeSwitch}, #{idCard}, #{totalCommission}, #{totalReward}, #{perBuyCoin}, #{showRewardCartoon}, #{shareUserId}, #{shareNum})</insert>
-    <insert id="insertSelective" parameterType="com.sinocall.footBallAI.bean.User" useGeneratedKeys="true" keyProperty="id">
+    <insert id="insertSelective" parameterType="com.reke.learn.bootExamples.bean.User" useGeneratedKeys="true" keyProperty="id">
         insert into user
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="id != 0">id,</if>
@@ -174,7 +174,7 @@
             <if test="shareNum != 0">#{shareNum},</if>
         </trim>
     </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="com.sinocall.footBallAI.bean.User">update user
+    <update id="updateByPrimaryKeySelective" parameterType="com.reke.learn.bootExamples.bean.User">update user
         <set>
             <if test="name != null">name = #{name},</if>
             <if test="password != null">password = #{password},</if>
@@ -231,7 +231,7 @@
         </set>
         where id = #{id,jdbcType=BIGINT}
     </update>
-    <update id="updateByPrimaryKey" parameterType="com.sinocall.footBallAI.bean.User">update user <set>name = #{name},
+    <update id="updateByPrimaryKey" parameterType="com.reke.learn.bootExamples.bean.User">update user <set>name = #{name},
         password = #{password}, nick_name = #{nickName}, gender = #{gender}, mobile = #{mobile}, mobile_area =
         #{mobileArea}, email = #{email}, logo = #{logo}, address = #{address}, regist_ip = #{registIp}, last_ip =
         #{lastIp}, login_count = #{loginCount}, sign = #{sign}, remain = #{remain}, exchange_num = #{exchangeNum},
@@ -250,7 +250,7 @@
 
 
 
-    <select id="selectBySql" resultType="com.sinocall.footBallAI.bean.User">${paramSQL}</select>
+    <select id="selectBySql" resultType="com.reke.learn.bootExamples.bean.User">${paramSQL}</select>
 
     <select id="selectCountBySql" resultType="java.lang.Integer">${paramSQL}</select>
 
