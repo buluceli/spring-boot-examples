@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    username: testKF
+    password: Test567
+    url: jdbc:mysql://192.168.10.200:3306/cck?useUnicode=true&useSSL=true
+    driver-class-name: com.mysql.jdbc.Driver
+
+mybatis:
+  mapperLocations: classpath:mybaties/*.xml
